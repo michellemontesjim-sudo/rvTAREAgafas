@@ -285,5 +285,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FotoPolaroid
   planoImagen: {fileID: 497740164306731520}
-  fuerzaSacudida: 0.5
-  velocidadRevelado: 1
+  fuerzaSacudida: 0.3
+  velocidadRevelado: 0.5

@@ -5,8 +5,9 @@ public class InteractionManager : MonoBehaviour
     public static InteractionManager instance { get; private set; }
     public bool panel1, panel2, panel3, panelBotonApagado;
 
-    public Animation Puerta;
-
+    [Header("Audio")]
+    [Tooltip("Asigna aquí el AudioSource que reproducirá el sonido")]
+    public AudioSource sonidoBoton;
     private void Awake() {
 
         if (instance != this && instance != null)
@@ -43,8 +44,15 @@ public class InteractionManager : MonoBehaviour
 
     }
 
-    public void OpenDoor()
+    public void ReproducirSonidoBoton()
     {
-        Puerta.Play();
+        if (sonidoBoton != null)
+        {
+            sonidoBoton.Play();
+        }
+        else
+        {
+            Debug.LogWarning("No has asignado el AudioSource en el InteractionManager.");
+        }
     }
 }
